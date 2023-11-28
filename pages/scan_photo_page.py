@@ -1,5 +1,4 @@
 import streamlit as st
-from detect import get_photo, detect_faces
 import cv2
 import numpy as np
 from PIL import Image
@@ -46,13 +45,16 @@ if inp:
                     best_prob = v
             if best_prob > 0:
                 recognized_names.append(best_match)
-            st.write(recognized_names[-1])
-    df = pd.DataFrame(recognized_names)
-    csv = convert_df(df)
-    st.download_button(
-        label="Download CSV",
-        data=csv,
-        file_name="attendance.csv",
-        mime='text/csv'
-    )
+                st.write(recognized_names[-1])
+    if len(recognized_names) > 0:
+        df = pd.DataFrame(recognized_names)
+        csv = convert_df(df)
+        st.download_button(
+            label="Download CSV",
+            data=csv,
+            file_name="attendance.csv",
+            mime='text/csv'
+        )
+    else:
+        st.write("The model did not recognize any person. ☹")
     
