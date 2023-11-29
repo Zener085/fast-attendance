@@ -5,9 +5,9 @@ such as club meetings or tests/exams of courses.
 ---
 
 ## How to work with ##
-To use this application, enter this [website]().
-If you did not register before, do it [here]() using your innopolis email (for example, g.bush@innopolis.university).
-To get the file with all emails, you have to upload the photo in the [upload page]().
+To use this application, enter this [website](https://fastattendance.streamlit.app/).
+If you did not register before, do it [here](https://fastattendance.streamlit.app/register_new_user_page) using your innopolis email (for example, g.bush@innopolis.university).
+To get the file with all emails, you have to upload the photo in the [upload page](https://fastattendance.streamlit.app/scan_photo_page).
 
 To run your own application, clone this repo and run the command in the console `streamlit run application.py`.
 Remember that you have to install the necessary libraries for the project.
